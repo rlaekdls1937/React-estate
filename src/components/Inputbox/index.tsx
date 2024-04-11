@@ -1,14 +1,21 @@
-import React from "react";
+import React, { ChangeEvent } from "react";
 import './style.css';
 
 export interface InputBoxProps {
     label: string;
     type: 'text' | 'password';
+    value: string;
     placeholder: string;
+    onChangeHandler: (event: ChangeEvent<HTMLInputElement>) => void;
     buttonTitle?: string;
+    buttonStatus?: boolean;
+    onButtonClickHandler?: () => void;
 }
 
-export default function InputBox({ label, type, placeholder, buttonTitle }: InputBoxProps) {
+export default function InputBox({ label, type, value, placeholder, onChangeHandler, buttonTitle, buttonStatus, onButtonClickHandler }: InputBoxProps) {
+
+    const buttonClass = buttonStatus ? 'input-primary-button' : 'input_disable-button';
+
     return (
         <div className="input-box">
             <div className="input-label label">{label}</div>
@@ -16,10 +23,12 @@ export default function InputBox({ label, type, placeholder, buttonTitle }: Inpu
                 <input
                     className="input"
                     type={type}
+                    value={value}
                     placeholder={placeholder}
+                    onChange={onChangeHandler}
                 />
                 { buttonTitle &&
-                <div className="input-disable-button">
+                <div className={buttonClass} onClick={onButtonClickHandler}>
                     {buttonTitle}
                 </div>
                 }

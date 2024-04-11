@@ -1,4 +1,4 @@
-#authentication-wrapper{
+#authentication-wrapper {
     display: flex;
     width: 100%;
     height: 100vh;
@@ -9,27 +9,28 @@
     min-width: 830px;
     background-size: cover;
 }
+
 .authentication-box {
     display: flex;
     justify-content: center;
     align-items: center;
-
+    
     flex-grow: 1;
     min-width: 610px;
 }
 
-.authentication-container{
+.authentication-container {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 24px;
 
     width: 380px;
-    /* background-color: wheat */
+    height: 523px;
 }
 
 .authentication-title {
-    color:rgba(64,64,64,0.8);
+    color: rgba(64, 64, 64, 1);
 }
 
 .authentication-contents {
@@ -37,7 +38,7 @@
     flex-direction: column;
     align-items: center;
     gap: 24px;
-    
+
     width: 100%;
 }
 
@@ -49,7 +50,7 @@
     width: 100%;
 }
 
-.authentication-button-container{
+.authentication-button-container {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -57,11 +58,18 @@
 
     width: 100%;
 }
-.authentication-sns-container{
+
+.authentication-sns-container {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 16px;
 }
 
+.kakao-button {
+    background-image: url('../../assets/kakao-button.png');
+}
 
+.naver-button {
+    background-image: url('../../assets/naver-button.png');
+}
