@@ -126,9 +126,9 @@ function SignUp({ onLinkClickHandler }: Props) {
     // 방법 1
     // const signUpButtonClass = isSignUpActive ? 'primary-button full-width' : 'disable-button full width';
     // 방법 2
-    // const signUpButtonClass = (isSignUpActive ? 'primary' : 'disable');
+    const signUpButtonClass = (isSignUpActive ? 'primary' : 'disable');
     // 방법 3
-    const signUpButtonClass = `${isSignUpActive ? 'primary' : 'disable'}-button full-width`;
+    // const signUpButtonClass = `${isSignUpActive ? 'primary' : 'disable'}-button full-width`;
     //                    event handler                    //
     const onIdChangeHandler = (event: ChangeEvent<HTMLInputElement>) => {
         const { value } = event.target;
